@@ -1,0 +1,162 @@
+{
+	"name": "WLED",
+	"type": "HTTP",
+	"path": "Software",
+	
+	"version": "0.0.8",
+	"description": "send a set request to your WLED-Device ",
+	"url":"repo Link",
+	"downloadURL": "repo download link",
+	
+	"hasInput": true,
+	"hasOutput": true, 
+
+	"hideDefaultCommands": true,
+	"hideDefaultParameters": [
+		"protocol",
+		"autoAdd"
+	],
+	
+	"defaults": {
+		"baseAddress":"http://192.168.188.40/",
+		"autoAdd": false,
+		"protocol":"GET",
+		"authentication":
+		{
+			"enabled":false
+		}
+	},
+	
+	"parameters": {
+	},
+	
+	"scripts": [
+		"wledGET.js"
+	],
+	
+	"values": {
+	},
+	
+	"commands": {
+		
+		"No Bri ":
+		{
+			"menu":"Advanced",
+			"callback":"noBri"
+		},
+
+		"Full Bri ":
+		{
+			"menu":"Advanced",
+			"callback":"fullBri"
+		},
+
+		"Toogle Master":
+		{
+			"menu":"Advanced",
+			"callback":"masterMaker",
+			"parameters": {
+				"mode": {
+					"type": "Integer",
+					"default": 0, 
+					"min":0,
+					"max":3,
+					"useForMapping": false
+				}
+			}
+		},
+
+
+		"Set Bri":
+		{
+			"menu": "Brigthness",
+			"callback": "setBri",
+			"parameters": {
+				"Bri": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true
+				}
+			}
+		},
+		
+		"Set RGB":
+		{
+			"menu": "Color",
+			"callback": "setRGB",
+			"parameters": {
+				"R": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true
+				},
+
+				"G": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true
+				},
+				"B": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true
+				}
+			}
+		},
+
+	"Set Effect":
+		{
+			"menu": "Effect",
+			"callback": "setEffect",
+			"parameters": {
+				"Effect Index": {
+					"type": "Integer",
+					"default": 1, 
+					"min":0,
+					"max":101,
+					"useForMapping": true
+				},
+
+				"Effect Speed": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true
+				},
+				"Effect Intensity": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true
+				}
+			}
+		},
+
+		"FastLED Palette":
+		{
+			"menu": "Color",
+			"callback": "setFastLed",
+			"parameters": {
+				"Effect Index": {
+					"type": "Integer",
+					"default": 1, 
+					"min":0,
+					"max":46,
+					"useForMapping": false					
+				}
+			}
+		}
+
+
+	}
+}
