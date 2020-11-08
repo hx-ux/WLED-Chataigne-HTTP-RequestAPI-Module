@@ -11,7 +11,9 @@ Put this folder in your Chataigne modules directory, which is most likely \
 # Usage
 Add the module in Chataigne:
 >Software-->WLED \
->dont forget to change to IP adress 
+>do not forget to change to IP adress 
 
 
 # Things not working
+*Auto-Trigger in the Command Tester Tab \
+*A few templates
