@@ -4,7 +4,7 @@ Chataigne module for the WLED Request Api, sending GET-Request to the device
 
 
 # How to Install
-Put this folder in your Chataigne modules directory, which is most likely \
+Put this folder in your Chataigne modules directory, which is most likely 
 >Documents\Chataigne\modules
 
 
