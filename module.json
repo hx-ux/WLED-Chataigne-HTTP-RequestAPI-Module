@@ -1,16 +1,14 @@
 {
-	"name": "WLED",
+	"name": "WLED-Controll",
 	"type": "HTTP",
 	"path": "Software",
 	
 	"version": "0.0.8",
 	"description": "send a set request to your WLED-Device ",
-	"url":"repo Link",
-	"downloadURL": "repo download link",
-	
+	"url":"https://github.com/hx-ux/WLED-Chataigne-HTTP-RequestAPI-Module",
+	"downloadURL": "https://github.com/hx-ux/WLED-Chataigne-HTTP-RequestAPI-Module.git",
 	"hasInput": true,
 	"hasOutput": true, 
-
 	"hideDefaultCommands": true,
 	"hideDefaultParameters": [
 		"protocol",
@@ -18,7 +16,7 @@
 	],
 	
 	"defaults": {
-		"baseAddress":"http://192.168.188.40/",
+		"baseAddress":"Your_IP",
 		"autoAdd": false,
 		"protocol":"GET",
 		"authentication":
@@ -39,15 +37,15 @@
 	
 	"commands": {
 		
-		"No Bri ":
+		"Blackout ":
 		{
 			"menu":"Advanced",
 			"callback":"noBri"
 		},
 
-		"Full Bri ":
+		"Full Brightness ":
 		{
-			"menu":"Advanced",
+			"menu":"Brightness",
 			"callback":"fullBri"
 		},
 
@@ -67,9 +65,9 @@
 		},
 
 
-		"Set Bri":
+		"Set Brightness":
 		{
-			"menu": "Brigthness",
+			"menu": "Brightness",
 			"callback": "setBri",
 			"parameters": {
 				"Bri": {
